@@ -1,5 +1,5 @@
 import  { useState } from 'react';
-import { Navbar, Sidebar } from './CombinedNav';
+import { Navbar, Sidebar } from './NewCombinedNav';
 
 function Header() {
   const [sidebarOpen, setSidebarOpen] = useState(false);

@@ -7,6 +7,15 @@
   box-sizing: border-box;
 }
 
+body{
+  background: linear-gradient(
+  to bottom,
+  #010714 0%,
+  #01040a 45%,
+  #000000 100%
+);
+}
+
 .container {
   display: flex;
   justify-content: space-between;

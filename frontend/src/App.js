@@ -4,7 +4,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Preloader from './components/LandingPages/Preloader/Preloader';
 import Spinner from './components/DashBoard/Spinner/Spinner';
 import { Suspense } from 'react';
-import Footer from './components/LandingPages/Footer/footer.js';
+import Footer from './components/LandingPages/Footer/footernew.js';
 import ReactGA from 'react-ga';
 import InitializeReactGA from './helper/googleAnalytics.ts';
 import NotFound from './components/LandingPages/NotFound/NotFound';
@@ -21,7 +21,7 @@ const LandingPages = React.lazy(() =>
 const DashBoard = React.lazy(() =>
   import('./components/DashBoard/MainMenu/DashBoard')
 );
-const About = React.lazy(() => import('./components/LandingPages/About/About'));
+const About = React.lazy(() => import('./components/LandingPages/About/AboutNew'));
 // const CamAmb = React.lazy(() =>
 //   import('./components/LandingPages/Camp_Amb/CamAmb')
 // );

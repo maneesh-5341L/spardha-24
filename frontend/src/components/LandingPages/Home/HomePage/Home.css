@@ -1,5 +1,6 @@
 /* Overall Section */
 @import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+
 .sctn {
   position:relative;
   min-height: 100vh;
@@ -15,7 +16,7 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
-  background: white;
+  background : black;
   align-items: center;
   justify-content: center;
 }

@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+.aboutSection {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  padding: 6rem 4rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trackLine {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, #00F0FF, transparent);
+  transform: skewX(-15deg);
+  opacity: 0.3;
+}
+
+.layoutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1400px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.narrativeZone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.glitchWrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.glitchHeader {
+  font-family: 'Black Ops One', system-ui, sans-serif;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 400; 
+  color: #ffffff;
+  position: relative;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+}
+
+.glitchHeader::before,
+.glitchHeader::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0; 
+  opacity: 0.7;
+  z-index: -1;
+  width: 100%;
+}
+
+.glitchHeader::before {
+  left: -3px;
+  text-shadow: 2px 0 #00F0FF; 
+}
+
+.glitchHeader::after {
+  left: 3px;
+  text-shadow: -2px 0 #00FF87; 
+}
+
+.accentSubtitle {
+  font-family: 'Google Sans', sans-serif;
+  color: #00FF87; 
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.textContent {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #A0AAB2;
+  border-left: 3px solid #00F0FF; 
+  padding-left: 1.5rem;
+}
+
+.textContent p {
+  margin-bottom: 1.5rem;
+}
+
+.statsZone {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Base Card Styling */
+.statShard {
+  position: relative;
+  background: rgba(10, 15, 20, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 1.5rem 3rem;
+  transform: skewX(-15deg);
+  border: 1px solid rgba(0, 240, 255, 0.1);
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1; /* Establishes a stacking context so text stays above the sweep */
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s ease;
+}
+
+/* The Animated "Sweep" Lighting Effect */
+.statShard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%; /* Starts invisible at the left edge */
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 240, 255, 0.25) 0%, rgba(0, 240, 255, 0.05) 100%);
+  z-index: -1; /* Keeps the light behind the text */
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1); /* Snappy but fluid timing */
+}
+
+/* Alternate Sweep Color for Even Rows (Neon Green) */
+.statShard:nth-child(even)::before {
+  background: linear-gradient(90deg, rgba(0, 255, 135, 0.25) 0%, rgba(0, 255, 135, 0.05) 100%);
+}
+
+/* Triggering the Sweep on Hover */
+.statShard:hover::before {
+  width: 100%; /* Expands all the way to the right and holds */
+}
+
+/* Hover Transforms and Borders */
+.statShard:hover {
+  transform: skewX(-15deg) translateX(-15px);
+}
+
+.statShard:nth-child(odd):hover {
+  border-color: rgba(0, 240, 255, 0.4); 
+}
+
+.statShard:nth-child(even):hover {
+  border-color: rgba(0, 255, 135, 0.4); 
+}
+
+/* Left Neon Accent Bar */
+.shardAccent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background: #00F0FF; 
+  box-shadow: 0 0 15px #00F0FF;
+}
+
+.statShard:nth-child(even) .shardAccent {
+  background: #00FF87; 
+  box-shadow: 0 0 15px #00FF87;
+}
+
+.shardContent {
+  transform: skewX(15deg);
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.statNumber {
+  font-family: 'Black Ops One', system-ui, sans-serif;
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin: 0;
+  min-width: 180px;
+  font-weight: 400; 
+}
+
+.statLabel {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #8A95A5;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/* --- Responsive Breakdown --- */
+
+/* Tablets (1024px and below) */
+@media (max-width: 1024px) {
+  .aboutSection {
+    padding: 4rem 2.5rem;
+  }
+  .layoutGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .trackLine {
+    display: none; /* Hide the slanted background line */
+  }
+  .statShard {
+    transform: skewX(0); /* Remove the slant */
+    padding: 1.5rem 2rem;
+  }
+  .statShard:hover {
+    transform: translateX(-10px); /* Simpler hover effect without the skew */
+  }
+  .shardContent {
+    transform: skewX(0);
+  }
+}
+
+/* Mobile Landscape & Large Phones (768px and below) */
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 3rem 1.5rem;
+  }
+  .glitchHeader {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+  .accentSubtitle {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+  }
+  .textContent {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding-left: 1rem;
+  }
+  .statShard {
+    padding: 1.2rem 1.5rem;
+  }
+  .statNumber {
+    font-size: 2.2rem;
+    min-width: 130px; /* Reduced to prevent text cutoff */
+  }
+  .statLabel {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+}
+
+/* Small Phones (480px and below) */
+@media (max-width: 480px) {
+  .aboutSection {
+    padding: 2rem 1rem;
+  }
+  .layoutGrid {
+    gap: 2rem;
+  }
+  .shardContent {
+    flex-direction: column; /* Stacks the number above the label */
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+  .statNumber {
+    min-width: auto; /* Allow natural width when stacked */
+    font-size: 2rem;
+  }
+  /* Reduce the glitch text spread to prevent horizontal scrolling */
+  .glitchHeader::before {
+    left: -2px;
+  }
+  .glitchHeader::after {
+    left: 2px;
+  }
+}

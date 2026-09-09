@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+/* TOP BAR MAIN CONTAINER */
+.top-bar {
+background:
+  linear-gradient(
+    135deg,
+    #081626 0%,
+    #102f52 50%,
+    #1a3e6d 100%
+  ) !important;
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  display: flex !important;
+  flex-direction: row !important;
+  width: 100% !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 0.3rem 0 !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  z-index: 100 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  min-height: 60px !important;
+  height: 60px !important;
+}
+
+/* LEFT LOGO (SPARDHA) */
+.brand-logo {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  margin-left: 2rem !important;
+  flex-shrink: 0 !important;
+}
+
+.logo {
+  height: 38px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+/* RIGHT EMBLEM LOGO (IIT BHU) */
+.right-emblem {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  margin-right: 2rem !important;
+  flex-shrink: 0 !important;
+}
+
+.emblem-logo {
+  height: 42px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  mix-blend-mode: lighten !important;
+  filter: brightness(1.15) contrast(110%) !important;
+}
+
+/* CENTER NAVBAR CONTAINER */
+.navbar,
+.navbar ul {
+  background: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.navbar {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-grow: 0 !important;
+  flex-shrink: 1 !important;
+  width: auto !important;
+  max-width: fit-content !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+/* NAV LIST */
+.navbar ul {
+  display: flex !important;
+  width: auto !important;
+  max-width: fit-content !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+}
+
+.navbar ul li {
+  position: relative !important;
+  cursor: pointer !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+}
+
+/* BASE LINK TEXT STYLING WITH BLACK OPS ONE */
+.navbar ul li a,
+.mobile-sidebar ul li a {
+  color: rgba(255, 255, 255, 0.88) !important;
+  text-decoration: none !important;
+  font-family: 'Black Ops One', cursive, sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.05em !important;
+  text-transform: capitalize !important;
+  padding: 0.4rem 0.85rem !important;
+  border-radius: 8px !important;
+  border: 1px solid transparent !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  
+  /* Snappy exit transition */
+  transition: all 0.15s ease-out !important;
+  
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  position: relative !important;
+  transform: none !important;
+  outline: none !important;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* FOCUS / ACTIVE RESETS */
+.navbar ul li a:focus,
+.navbar ul li a:focus-visible,
+.navbar ul li a:active,
+.mobile-sidebar ul li a:focus,
+.mobile-sidebar ul li a:focus-visible,
+.mobile-sidebar ul li a:active {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* GLASSMORPHIC HOVER & ACTIVE STATE */
+.navbar ul li a:hover,
+.navbar ul li a.active,
+.mobile-sidebar ul li a:hover {
+  color: #ffffff !important;
+  
+  /* Multi-layered Glass Gradient */
+  background: linear-gradient(
+    135deg, 
+    rgba(255, 255, 255, 0.22) 0%, 
+    rgba(16, 45, 78, 0.5) 50%, 
+    rgba(0, 242, 254, 0.15) 100%
+  ) !important;
+  
+  /* Glass Reflection Borders */
+  border-top: 1px solid rgba(255, 255, 255, 0.5) !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-right: 1px solid rgba(0, 242, 254, 0.4) !important;
+  border-bottom: 1px solid rgba(0, 242, 254, 0.3) !important;
+  border-radius: 8px !important;
+  
+  /* Frosted Glass Blur & Saturation */
+  backdrop-filter: blur(16px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(200%) !important;
+  
+  /* Inner Specular Highlight + Soft Neon Glow */
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.6),
+    inset 0 -1px 2px rgba(0, 242, 254, 0.2),
+    0 4px 16px rgba(0, 0, 0, 0.35),
+    0 0 12px rgba(0, 242, 254, 0.25) !important;
+    
+  transform: none !important;
+  opacity: 1 !important;
+  transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+/* DISABLE OLD UNDERLINE EFFECT */
+.navbar ul li::after,
+.navbar ul li:hover::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* RESPONSIVE & MOBILE SIDEBAR STYLING */
+@media screen and (max-width: 900px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .hamburger-btn {
+    display: block !important;
+  }
+
+  .top-bar {
+    padding: 0.6rem 1.2rem !important;
+  }
+}
+
+.hamburger-btn {
+  display: none;
+  cursor: pointer;
+  z-index: 110;
+}
+
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100%;
+  background: rgba(6, 16, 27, 0.98);
+  backdrop-filter: blur(16px);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 120;
+}
+
+.mobile-sidebar.open {
+  right: 0;
+}
+
+.mobile-sidebar .close-btn {
+  align-self: flex-end;
+  cursor: pointer;
+  color: white;
+}
+
+.mobile-sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 115;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar-backdrop.active {
+  opacity: 1;
+  pointer-events: all;
+}

@@ -1,0 +1,920 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+.black-ops-one-regular {
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root{
+  --bg-navy: #031326;
+  --accent-green: #64ffda;
+  --accent-yellow: #ffd93d;
+  --muted-white: rgba(255,255,255,0.90);
+}
+
+/* Core Footer Container */
+.footer-premium {
+  position: relative;
+  background: black;
+  padding: 50px 0 16px;
+  font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--muted-white);
+  margin-top: 0;
+}
+
+/* Thick Yellow Top Division Line */
+.footer-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--accent-yellow);
+  border-radius: 0 0 3px 3px;
+  box-shadow: 
+    0 0 25px rgba(255, 217, 61, 0.4),
+    0 0 50px rgba(255, 217, 61, 0.2);
+  z-index: 11;
+}
+
+/* Main Content */
+.footer-main-content {
+  position: relative;
+  z-index: 10;
+  background: transparent;
+  margin: 0;
+  padding: 16px 30px 14px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+   /* 0 -6px 18px rgba(0,0,0,0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);*/
+}
+
+/* Logo inside main footer */
+.footer-logo {
+  width: 195px;
+  height: auto;
+  margin-bottom: 16px;
+ /* filter: drop-shadow(0 6px 12px rgba(0,0,0,0.7));*/
+  transition: all 0.25s ease;
+  border: none;
+  outline: none;
+  background: transparent;
+   padding: 0;
+   display: block;
+}
+.footer-logo:hover { 
+  transform: translateY(-3px); 
+  /* border-color: var(--accent-yellow);
+  box-shadow: 0 0 18px rgba(255, 217, 61, 0.5); */
+  filter: drop-shadow(0 0 12px rgba(255, 217, 61, 0.5)); /* Glows cleanly around the logo itself */
+}
+
+/* Grid layout */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.3fr;
+  gap: 36px;
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+/* Left Column */
+.footer-left { 
+  display:flex; 
+  flex-direction:column; 
+  padding-right: 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+.brand-content { text-align: left; }
+
+.brand-title {
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--muted-white);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.brand-highlight {
+  font-weight: 700;
+  color: var(--accent-green);
+  text-transform: uppercase;
+}
+
+.brand-description {
+  color: rgba(255,255,255,0.82);
+  font-size: .96rem;
+  line-height: 1.58;
+  max-width: 400px;
+  margin-bottom: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.general-contact h4 {
+  color: rgba(255,255,255,0.92);
+  font-size: 1.02rem;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.contact-link-main {
+    font-size: 1.00rem;
+  color: var(--accent-green);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0;
+  background:transparent;
+  border: none;
+  transition: all 0.25s ease;
+  display: inline-block;
+}
+.contact-link-main:hover {
+   color: var(--accent-yellow);
+  text-shadow: 0 0 12px rgba(255, 217, 61, 0.6); /* Clean text glow instead of box */
+  transform: translateX(3px);
+  background: transparent;
+  border: none;
+  box-shadow: none,
+}
+
+/* Middle Column */
+.footer-middle { 
+  display:flex; 
+  flex-direction:column; 
+  gap:18px; 
+  padding: 0 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nav-section h3, .social-section h3 {
+  color: #fff; font-size: 1.12rem; font-weight: 700; margin-bottom: 10px;
+  text-transform: uppercase; letter-spacing: 1.2px; position: relative;
+}
+
+.nav-section h3::after, .social-section h3::after {
+  content: ''; position: absolute; bottom: -6px; left: 0; width: 38px; height: 3.5px;
+  background: var(--accent-green); border-radius: 2px;
+}
+
+.nav-links { list-style: none; padding: 0; margin: 0; }
+.nav-links li { 
+  margin-bottom: 6px; 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+  padding-bottom: 6px;
+}
+.nav-links li:last-child { border-bottom: none; }
+/* .nav-links a {
+  color: rgba(255,255,255,0.82); text-decoration: none; font-size: 0.9rem;
+  transition: all 0.18s ease; padding: 3px 0; display: block;
+  border-radius: 4px;
+  padding: 6px 8px;
+}
+.nav-links a:hover { 
+  color: var(--accent-green); 
+  transform: translateX(4px); 
+  background: rgba(100, 255, 218, 0.05);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+} */
+
+/* yellow hover effect for nav links */
+/* Navigation links (Home, About, Sponsors) */
+.nav-links a {
+  color: var(--accent-green);               /* Green text by default (#64ffda) */
+  text-decoration: none;
+  font-size: .98rem;
+  font-weight: 500;
+  display: block;
+  border-radius: 6px;
+  padding: 7px 10px;
+  border: 1px solid transparent;            /* Smooth border transition */
+  transition: all 0.25s ease;
+}
+
+/* On hover: yellow box shadow and glowing effect */
+.nav-links a:hover {
+  color: var(--accent-green);               /* Keeps text green (or change to #ffd93d for yellow) */
+  background: rgba(255, 217, 61, 0.08);     /* Subtle yellow background tint */
+  border: 1px solid var(--accent-yellow);   /* Yellow border (#ffd93d) */
+  box-shadow: 
+    0 0 15px rgba(255, 217, 61, 0.5),       /* Outer glowing yellow box shadow */
+    inset 0 0 8px rgba(255, 217, 61, 0.15); /* Soft inner yellow glow */
+  transform: translateX(5px);               /* Smooth slide effect */
+}
+
+/* ===== Social icons (circle + white svg fill controlled via CSS) ===== */
+.social-grid { display:flex; gap:12px; align-items:center; }
+
+/* common link/anchor */
+.social-link {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:44px;
+  height:44px;
+  border-radius: 50%;
+  transition: transform 0.18s ease, filter 0.18s ease;
+  text-decoration: none;
+  /* ensure svg inside can use currentColor */
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  -webkit-tap-highlight-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Social icons */
+.social-grid {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.social-link img {
+  width: 28px;   /* control size */
+  height: 28px;  /* keeps them uniform */
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-link:hover img {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+/* Platform backgrounds */
+.social-link.facebook { background: #1877F2; }
+.social-link.instagram {
+  background: radial-gradient(circle at 30% 30%, #f58529, #dd2a7b, #8134af, #515bd4);
+}
+.social-link.linkedin { background: #0A66C2; }
+
+/* Hover + focus (lift + slight darken/scale) */
+.social-link:focus,
+.social-link:hover {
+  transform: translateY(-4px) scale(1.08);
+  /* filter: brightness(0.95); */
+  outline: none;
+  border-color: var(--accent-yellow);
+  box-shadow: 0 0 18px rgba(255,217,61.0.6);
+}
+
+/* Right Column */
+.footer-right { 
+  display:flex; 
+  flex-direction:column; 
+  padding-left: 20px;
+}
+
+.contact-section h3 { 
+  font-size: 1.12rem; 
+  margin-bottom: 10px; 
+  font-weight:700;
+  color:#fff; 
+  position: relative;
+}
+.contact-section h3::after { 
+  content:''; 
+  position:absolute; 
+  bottom:-6px; 
+  left:0; 
+  width:38px; 
+  height:3.5px; 
+  background: var(--accent-green); 
+  border-radius:2px; 
+}
+
+.team-contacts { display:flex; flex-direction:column; gap:18px; }
+
+.team-member { 
+  background: transparent; 
+  padding: 0; 
+  border: none;
+  outline: none;
+  transition: all 0.25s ease;
+}
+.team-member:hover {
+     background: transparent;
+  border: none;
+  box-shadow: none;
+  transform: translateY(-1px);
+}
+
+.member-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; gap: 10px; }
+
+.team-role { color: rgba(255,255,255,0.72); font-size: 0.78rem; font-weight: 600; text-transform: uppercase; }
+
+/*.team-name {
+  color: var(--accent-green);
+  font-size: 1.15rem;
+  font-weight: 300;
+  letter-spacing: 1.2px;
+  background: transparent;
+  padding: 0;
+  transition: all 0.25s ease;
+  display: inline-block;
+}
+.team-name:hover { color: var(--accent-yellow); transform: translateX(3px); }*/
+
+/*.team-name {
+  font-family: 'Caveat', cursive, sans-serif;
+  font-size: 1.55rem;                       
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--accent-green);
+  text-shadow: 0 0 12px rgba(100, 255, 218, 0.4); 
+  background: transparent;
+  padding: 0;
+  display: inline-block;
+  transition: all 0.25s ease;
+}
+
+.team-name:hover { 
+  color: var(--accent-yellow);
+  text-shadow: 0 0 16px rgba(255, 217, 61, 0.6);
+  transform: scale(1.06) translateX(4px); 
+}*/
+
+.team-name {
+  font-family: 'Playfair Display', serif;
+  font-style: google-sans;
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--accent-green);
+  background: transparent;
+  padding: 0;
+  display: inline-block;
+  transition: all 0.25s ease;
+}
+
+.team-name:hover { 
+  color: var(--accent-yellow);
+  transform: translateX(4px); 
+}
+
+/* Contact link hover */
+.contact-link { 
+  color: var(--accent-green); 
+  text-decoration: none; 
+  font-size: 0.92rem; 
+  font-weight: 600;
+  padding: 0;
+  border: none;
+  background: transparent;
+  transition: all 0.25s ease;
+  display: inline-block;
+}
+.contact-link:hover { 
+  color: var(--accent-yellow); 
+   text-shadow: 0 0 10px rgba(255, 217, 61, 0.6);
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  transform: translateX(3px);
+}
+
+/* Footer Bottom */
+.footer-bottom { 
+  margin-top: 24px; 
+  padding-top: 14px; 
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.copyright { 
+  color: rgba(255,255,255,0.48); 
+  font-size: 0.82rem; 
+  text-align: center; 
+  padding-bottom: 6px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: transparent;
+  border: none;
+}
+
+/* Responsive
+@media (max-width: 1024px) {
+  .footer-logo { width: 92px; margin-bottom: 16px; }
+  .footer-main-content { padding: 40px 16px 14px; }
+  .footer-premium::before {
+    height: 5px;
+  }
+  .footer-premium::after {
+    font-size: 12px;
+    padding: 6px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-premium { padding: 40px 0 12px; }
+  .footer-logo { width: 80px; margin-bottom: 14px; }
+  .footer-premium::before {
+    height: 4px;
+  }
+  .footer-premium::after {
+    font-size: 11px;
+    padding: 5px 14px;
+    top: -6px;
+  }
+
+  /* collapse into 2 columns for tablets */
+  /*}.footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .footer-left,
+  .footer-middle {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo { width: 64px; margin-bottom: 12px; }
+  .footer-main-content { 
+    padding: 30px 12px 10px;
+    border-radius: 0 0 8px 8px;
+  }
+  .footer-premium::before {
+    height: 3px;
+  }
+  .footer-premium::after {
+    font-size: 10px;
+    padding: 4px 12px;
+    top: -5px;
+    content: 'SPARDHA 2026';
+  }
+
+  /* stack into 1 column for mobile */
+  /*.footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .footer-left,
+  .footer-middle {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-bottom: 20px;
+    padding-right: 0;
+  }
+} */
+ /* ================= Mobile & Tablet Responsive ================= */
+
+/* @media (max-width: 1024px) {
+  .footer-logo { 
+    width: 150px; 
+    margin-bottom: 18px; 
+  }
+  .footer-main-content { 
+    padding: 30px 20px 14px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-premium { 
+    padding: 36px 0 20px; 
+  } */
+
+  /* Keep the logo nice and prominent on mobile */
+  /* .footer-logo { 
+    width: 140px; 
+    margin-bottom: 16px; 
+  }
+
+  /* Make brand title readable */
+  /* .brand-title {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  } */
+
+  /* Readable body text */
+  /* .brand-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+  } */
+
+  /* Stack columns into a clean single column */
+  /* .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    border-right: none;
+    padding: 0;
+  }
+  
+  .footer-left,
+  .footer-middle {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 24px;
+  }
+
+  /* Section headings */
+  /* .nav-section h3, 
+  .social-section h3, 
+  .contact-section h3 {
+    font-size: 1.15rem;
+    margin-bottom: 14px;
+  } */
+
+  /* Make Navigation links bigger and easy to tap */
+  /* .nav-links li {
+    margin-bottom: 8px;
+  }
+  .nav-links a {
+    font-size: 1.05rem;
+    padding: 10px 14px;
+    display: inline-block;
+  } */
+
+  /* Big, readable main email link */
+  /* .contact-link-main {
+    font-size: 1rem;
+    padding: 10px 18px;
+    display: inline-block;
+  } */
+
+  /* Mohammad Kaif and roles on mobile */
+  /* .team-role {
+    font-size: 0.85rem;
+  }
+  .team-name {
+    font-size: 1.15rem;
+  } */
+
+  /* Right column email links */
+  /* .contact-link {
+    font-size: 0.98rem;
+    padding: 8px 12px;
+    display: inline-block;
+  } */
+
+  /* Social Icons */
+  /* .social-grid {
+    gap: 16px;
+    margin-top: 14px;
+  }
+  .social-link {
+    width: 48px;
+    height: 48px;
+  }
+  .social-link img {
+    width: 26px;
+    height: 26px;
+  } */
+
+  /* Copyright bar */
+  /* .copyright {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    padding: 12px;
+  } */
+
+  /* Top division line & badge adjustments */
+  /* .footer-premium::before {
+    height: 4px;
+  }
+  .footer-premium::after {
+    font-size: 11px;
+    padding: 5px 14px;
+    top: -6px;
+  } */
+
+
+/* @media (max-width: 480px) {
+  .footer-main-content { 
+    padding: 20px 16px 10px;
+  }
+
+  .footer-logo {
+    width: 130px;
+  }
+
+  .footer-premium::after {
+    content: 'SPARDHA 2026';
+    font-size: 10px;
+    padding: 4px 12px;
+  }
+} */ 
+
+/* ================= Mobile & Tablet Responsive (Enlarged) ================= */
+
+
+
+
+
+
+/* @media (max-width: 1024px) {
+  .footer-logo { 
+    width: 180px; 
+    margin-bottom: 18px; 
+  }
+  .footer-main-content { 
+    padding: 30px 20px 14px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-premium { 
+    padding: 40px 0 24px; 
+  } */
+
+  /* Large, bold logo on mobile */
+  /* .footer-logo { 
+    width: 175px; 
+    margin-bottom: 18px; 
+  } */
+
+  /* Spardha 2026 title */
+  /* .brand-title {
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+  } */
+
+  /* Description paragraph */
+  /* .brand-description {
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 22px;
+  } */
+
+  /* Stack columns cleanly into 1 column */
+  /* .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+  
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    border-right: none;
+    padding: 0;
+  }
+  
+  .footer-left,
+  .footer-middle {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 28px;
+  } */
+
+  /* Section Headings ("Navigate", "Connect With Us", "Contact Team") */
+  /* .nav-section h3, 
+  .social-section h3, 
+  .contact-section h3 {
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+  } */
+
+  /* Big Navigation links (Home, About, Sponsors) */
+  /* .nav-links li {
+    margin-bottom: 10px;
+  }
+  .nav-links a {
+    font-size: 1.15rem;
+    padding: 12px 16px;
+    display: inline-block;
+  } */
+
+  /* Big main email button (spardha@itbhu.ac.in) */
+  /* .contact-link-main {
+    font-size: 1.1rem;
+    padding: 12px 22px;
+    display: inline-block;
+  } */
+
+  /* Role headings */
+  /* .team-role {
+    font-size: 0.95rem;
+  } */
+
+  /* Mohammad Kaif (large, attractive signature script on mobile) */
+  
+  /* 3 email links on the right */
+  /* .contact-link {
+    font-size: 1.05rem;
+    padding: 10px 16px;
+    display: inline-block;
+  } */
+
+  /* Social Icons */
+  /* .social-grid {
+    gap: 18px;
+    margin-top: 14px;
+  }
+  .social-link {
+    width: 50px;
+    height: 50px;
+  }
+  .social-link img {
+    width: 28px;
+    height: 28px;
+  } */
+
+  /* Copyright text */
+  /* .copyright {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    padding: 14px;
+  } */
+
+  /* Top badge */
+  /* .footer-premium::before {
+    height: 4px;
+  }
+  .footer-premium::after {
+    font-size: 11px;
+    padding: 5px 14px;
+    top: -6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-main-content { 
+    padding: 24px 18px 12px;
+  } */
+
+  /* Keep logo large on small smartphones */
+  /* .footer-logo {
+    width: 165px;
+  }
+
+  .brand-title {
+    font-size: 1.65rem;
+  }
+
+  .team-name {
+    font-size: 1.55rem;
+  }
+
+  .footer-premium::after {
+    content: 'SPARDHA 2026';
+    font-size: 11px;
+    padding: 5px 14px;
+  } */
+
+
+
+
+
+
+
+  /* ================= Mobile & Tablet Responsive (Refined) ================= */
+
+@media (max-width: 1024px) {
+  .footer-logo { 
+    width: 175px; 
+    margin-bottom: 16px; 
+  }
+  .footer-main-content { 
+    padding: 24px 20px 14px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-premium { 
+    padding: 30px 0 18px; 
+  }
+
+  /* Keep logo size as you like it */
+  .footer-logo { 
+    width: 170px; 
+    margin-bottom: 14px; 
+  }
+
+  /* Scaled-down readable title */
+  .brand-title {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  /* Scaled-down description */
+  .brand-description {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  /* Column gap */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    border-right: none;
+    padding: 0;
+  }
+  
+  .footer-left,
+  .footer-middle {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 20px;
+  }
+
+  /* Section Headings */
+  .nav-section h3, 
+  .social-section h3, 
+  .contact-section h3 {
+    font-size: 1.08rem;
+    margin-bottom: 10px;
+  }
+
+  /* Scaled-down Navigation links */
+  .nav-links li {
+    margin-bottom: 6px;
+  }
+  .nav-links a {
+    font-size: 0.96rem;
+    padding: 7px 10px;
+    display: inline-block;
+  }
+
+  /* Scaled-down main email button */
+  .contact-link-main {
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    display: inline-block;
+  }
+
+  /* Right column team */
+  .team-role {
+    font-size: 0.78rem;
+  }
+
+  .team-name {
+    font-size: 1.35rem;       /* Refined script size for mobile */
+  }
+
+  .contact-link {
+    font-size: 0.88rem;
+    padding: 6px 10px;
+    display: inline-block;
+  }
+
+  /* Social Icons */
+  .social-grid {
+    gap: 14px;
+    margin-top: 10px;
+  }
+  .social-link {
+    width: 42px;
+    height: 42px;
+  }
+  .social-link img {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Copyright text */
+  .copyright {
+    font-size: 0.78rem;
+    line-height: 1.5;
+    padding: 10px;
+  }
+
+  .footer-premium::before {
+    height: 4px;
+  }
+  .footer-premium::after {
+    font-size: 11px;
+    padding: 5px 14px;
+    top: -6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-main-content { 
+    padding: 18px 14px 10px;
+  }
+
+  /* Logo stays clear and good size */
+  .footer-logo {
+    width: 160px;
+  }
+
+  .brand-title {
+    font-size: 1.4rem;
+  }
+
+  .team-name {
+    font-size: 1.28rem;
+  }
+
+}

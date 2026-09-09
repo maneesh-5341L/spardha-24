@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Bebas+Neue&family=Cinzel:wght@600&display=swap');
+
+.hero-section {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: 100svh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #001422;
+  color: #eef8ff;
+  user-select: none;
+}
+
+.hero-video {
+  position: absolute;
+  z-index: -3;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.overlay {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 60% 45% at 50% 45%,
+      rgba(1, 37, 60, 0.08) 0%,
+      rgba(0, 17, 31, 0.36) 65%,
+      rgba(0, 8, 17, 0.86) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 15, 27, 0.56) 0%,
+      rgba(0, 18, 31, 0.12) 32%,
+      rgba(0, 13, 24, 0.14) 64%,
+      rgba(0, 8, 16, 0.76) 100%
+    );
+}
+
+.hero-section::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: '';
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 5, 12, 0.28),
+    transparent 25%,
+    transparent 75%,
+    rgba(0, 5, 12, 0.28)
+  );
+}
+
+.center-heading {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding: clamp(6rem, 14vh, 10rem) 1rem 0;   /* was: ...clamp(0.5rem, 2vh, 1.5rem) */
+  text-align: center;
+}
+
+.center-heading h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.spardha-logo {
+  width: 100%;
+  font-family: 'Anta', sans-serif;
+  font-weight: 400;
+  filter: drop-shadow(0 1.35rem 0.6rem rgba(0, 5, 13, 0.42));
+}
+
+/* Safety net: if BlurText wraps words/chars in inner spans,
+   make sure they inherit the gradient fill instead of a solid color */
+.spardha-logo > span:first-child * {
+  color: inherit;
+  -webkit-text-fill-color: inherit;
+}
+
+.spardha-logo > span:first-child {
+  display: block;
+  font-size: clamp(5.25rem, 16.7vw, 17.5rem);
+  font-style: italic;
+  line-height: 0.72;
+  letter-spacing: -0.11em;
+  white-space: nowrap;
+  transform: skewX(-10deg);
+  background: linear-gradient(
+    155deg,
+    #6dbce8 8%,
+    #c6e3ef 48%,
+    #f4fafb 66%,
+    #89aec7 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.spardha-year {
+  display: block;
+  margin-top: clamp(0.95rem, 2.7vw, 2.2rem);
+  padding-right: 0.08em;
+  font-size: clamp(4.4rem, 10.5vw, 10.2rem);
+  font-style: italic;
+  line-height: 0.68;
+  letter-spacing: -0.12em;
+  transform: skewX(-4deg);
+  background: linear-gradient(155deg, #71bee9 5%, #e8f5f9 54%, #89b0c9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bottom-row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.7rem, 1.8vh, 1.2rem);
+  width: 100%;
+  padding: 0 clamp(1rem, 5vw, 5rem) clamp(3rem, 8vh, 5.5rem);
+}
+
+.date-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 3vw, 3.8rem);
+}
+
+.opening-info {
+  margin: 0;
+  color: #8bcdf1;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.3rem, 2.6vw, 2.4rem);   /* was: clamp(1.05rem, 2.1vw, 1.9rem) */
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 1rem rgba(101, 196, 241, 0.35);
+}
+
+
+.fest-tagline {
+  margin: 0;
+  color: #f2e9d8;
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-variant: small-caps;
+  font-variant-caps: small-caps;
+  font-size: clamp(1.6rem, 3.6vw, 2.8rem);   /* was: clamp(1.3rem, 3vw, 2.3rem) */
+  letter-spacing: 0.14em;
+  text-shadow: 0 0.15rem 0.6rem rgba(0, 0, 0, 0.35);
+}
+
+.date-line {
+  display: block;
+  width: clamp(4.5rem, 10vw, 9.5rem);   /* was: clamp(3.8rem, 9vw, 8.6rem) */
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #bceaff 32%, #bceaff 68%, transparent);
+  box-shadow: 0 0 0.75rem rgba(160, 224, 255, 0.48);
+}
+
+.spardha-logo {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.spardha-logo-img {
+  width: min(78vw, 780px);
+  height: auto;
+  filter: drop-shadow(0 1.35rem 0.6rem rgba(0, 5, 13, 0.42));
+  animation: logo-reveal 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+
+@media (max-width: 640px) {
+  .center-heading {
+    padding-top: 5rem;
+  }
+
+  .spardha-logo > span:first-child {
+    font-size: clamp(4.15rem, 20vw, 7.7rem);
+  }
+
+  .spardha-year {
+    font-size: clamp(3.6rem, 14.5vw, 6.2rem);
+  }
+
+  .bottom-row {
+    gap: 0.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .date-row {
+    gap: 0.65rem;
+  }
+
+   .opening-info {
+    font-size: 1.05rem;   /* was: 0.9rem */
+    letter-spacing: 0.08em;
+  }
+   .fest-tagline {
+    font-size: 1.35rem;   /* was: 1.15rem */
+    letter-spacing: 0.08em;
+  }
+  .date-line {
+    width: 2.6rem;   /* was: 2.25rem */
+  }
+}
+
+@keyframes logo-reveal {
+  from {
+    opacity: 0;
+    filter: blur(14px) drop-shadow(0 1.35rem 0.6rem rgba(0, 5, 13, 0.42));
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0) drop-shadow(0 1.35rem 0.6rem rgba(0, 5, 13, 0.42));
+    transform: translateY(0);
+  }
+}
